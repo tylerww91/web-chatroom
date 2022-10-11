@@ -32,7 +32,7 @@
 <body>
     <header class="page-header">
         <img class="logo" src="/assets/html_css_js.png" alt="logo">
-        <p class="title">Supabase Web App</p>
+        <p class="title">Yahoo Chat Room</p>
         <nav>
             <a href="/">Home</a>
             <a id="sign-out-link" href="auth">Sign Out</a>
@@ -40,7 +40,23 @@
     </header>
 
     <main>
-
+        <section>
+            Placeholder
+        </section>
+        <form class="comment-form" id="comment-form">
+            <label>
+                <div>
+                    write your comment
+                </div>
+                <textarea name="comment" id="comment" cols="30" rows="10" required></textarea>
+            </label>
+            <button class="post-button">post</button>
+        </form>
+        <ul id="comment-list" class="comment-list">
+            <li class="post"></li>
+            <li class="post"></li>
+            <li class="post"></li>
+        </ul>
     </main>
 
 </body>
