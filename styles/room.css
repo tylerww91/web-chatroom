@@ -17,20 +17,17 @@ body {
 
 main {
     display: grid;
-    grid-template-rows: 90px auto 50px;
+    grid-template-rows: 20% auto 20%;
     gap: 10px;
-    height: 100%;
+    height: 90vh;
 }
 
 section {
     background: var(--offset-color);
     border: 4px solid var(--label-color);
     padding: 20px;
-    font-weight: 800;
-    font-size: x-large;
-    overflow-y: auto;
-    display: flex;
-    justify-content: center;
+    overflow-y: scroll;
+    width: 100%;
 }
 
 form {
@@ -63,7 +60,7 @@ ul {
     flex-direction: column-reverse;
     padding: 20px;
     gap: 5px;
-    overflow: auto;
+    overflow: scroll;
 }
 
 .user {
