@@ -24,3 +24,33 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+![wireframe](/assets/chatroom%20wireframe.png)
+
+## HTML req
+
+sign in page:
+
+prebuilt, add additional CSS styling if need be
+
+board detail page:
+
+-   top post, different formatting will be needed
+-   add a message button
+-   render messages
+
+## functions
+
+renderMessages
+createMessage
+onMessage
+getMessage
+
+## event listeners
+
+pageload
+-renderMessages
+-onMessage
+
+form listener for comments
+-createMessage
