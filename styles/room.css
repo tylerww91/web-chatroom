@@ -1,0 +1,75 @@
+:root {
+    --background: #662963;
+    --header-background: #ecf2a1;
+    --text-color: #010101;
+    --label-color: #bc80ba;
+    --placeholder-color: #ecf2a1;
+    --offset-color: #f6f6f6;
+    --action-color: #ecf2a1;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 80%;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 90px auto 50px;
+    gap: 10px;
+    height: 100%;
+}
+
+section {
+    background: var(--offset-color);
+    border: 4px solid var(--label-color);
+    padding: 20px;
+    font-weight: 800;
+    font-size: x-large;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    background-color: var(--offset-color);
+    border: 4px solid var(--label-color);
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background: #e0e0e0;
+    font-weight: bold;
+    border: 4px solid #8f8f8f;
+    padding: 5px;
+    height: 50px;
+    color: #8f8f8f;
+    border-radius: 10px;
+}
+textarea {
+    width: 100%;
+}
+ul {
+    background: #e0e0e0;
+    border: 4px solid var(--label-color);
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+    gap: 5px;
+    overflow: auto;
+}
+
+.user {
+    font-weight: 800;
+}
+
+.rules {
+    width: 100%;
+}

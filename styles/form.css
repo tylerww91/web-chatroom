@@ -54,9 +54,8 @@ form button {
     margin-top: 10px;
     height: 45px;
     background: var(--action-color);
-    border: 0;
     font-weight: bold;
-    color: white;
+    border: 4px solid #cbd71d;
 }
 
 form button:disabled {

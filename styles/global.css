@@ -1,11 +1,11 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --text-color: rgb(7, 5, 68);
-    --label-color: rgb(75, 102, 98);
-    --placeholder-color: rgb(136, 136, 153);
-    --offset-color: rgb(217, 236, 217);
-    --action-color: rgb(77, 132, 252);
+    --background: #662963;
+    --header-background: #ecf2a1;
+    --text-color: #010101;
+    --label-color: #bc80ba;
+    --placeholder-color: #ecf2a1;
+    --offset-color: #f6f6f6;
+    --action-color: #ecf2a1;
 
     --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
         'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
