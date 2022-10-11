@@ -28,3 +28,7 @@ export async function signOutUser() {
 }
 
 /* Data functions */
+
+export async function createPost(post) {
+    return await client.from('commenthold').insert(post).single();
+}
