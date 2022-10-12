@@ -4,6 +4,8 @@ import './auth/user.js';
 import { createPost } from './fetch-utils.js';
 import { renderPost } from './render-utils.js';
 import { getPosts } from './fetch-utils.js';
+import { onMessage } from './fetch-utils.js';
+import { getPost } from './fetch-utils.js';
 /* Get DOM Elements */
 const errorDisplay = document.getElementById('error-display');
 const postForm = document.getElementById('post-form');
@@ -24,6 +26,17 @@ window.addEventListener('load', async () => {
     } else {
         displayPosts();
     }
+    onMessage(async (payload) => {
+        const postId = payload.new.id;
+        const postResponse = await getPost(postId);
+        error = postResponse.error;
+
+        if (error) {
+            displayError();
+        } else {
+            displayPosts();
+        }
+    });
 });
 
 postForm.addEventListener('submit', async (e) => {
@@ -58,7 +71,6 @@ function displayPosts() {
 
 function displayError() {
     if (error) {
-        console.log(error);
         errorDisplay.textContent = error.message;
     } else {
         errorDisplay.textContent = '';

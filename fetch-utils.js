@@ -36,3 +36,11 @@ export async function createPost(post) {
 export async function getPosts() {
     return await client.from('commenthold').select('*');
 }
+
+export async function getPost(id) {
+    return await client.from('commenthold').select('*').eq('id', id).single();
+}
+
+export function onMessage(handleMessage) {
+    client.from('commenthold').on('INSERT', handleMessage).subscribe();
+}
