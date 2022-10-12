@@ -34,6 +34,8 @@ window.addEventListener('load', async () => {
         if (error) {
             displayError();
         } else {
+            const post = postResponse.data;
+            posts.push(post);
             displayPosts();
         }
     });
