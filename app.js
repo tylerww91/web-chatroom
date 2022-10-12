@@ -10,6 +10,7 @@ import { getPost } from './fetch-utils.js';
 const errorDisplay = document.getElementById('error-display');
 const postForm = document.getElementById('post-form');
 const postList = document.getElementById('post-list');
+const scroll = document.querySelector('.scroll');
 
 /* State */
 let error = null;
@@ -37,6 +38,7 @@ window.addEventListener('load', async () => {
             const post = postResponse.data;
             posts.push(post);
             displayPosts();
+            scroll.scrollIntoView(false); //needs to be called on the scrolling container (queryselector('.scroll'))
         }
     });
 });

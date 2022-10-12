@@ -75,5 +75,4 @@ textarea {
     flex-direction: column;
     padding: 20px;
     gap: 5px;
-    overflow: scroll;
 }
