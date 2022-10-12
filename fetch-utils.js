@@ -44,3 +44,7 @@ export async function getPost(id) {
 export function onMessage(handleMessage) {
     client.from('commenthold').on('INSERT', handleMessage).subscribe();
 }
+
+export async function updateProfile(profile) {
+    return await client.from('profiles').upsert(profile).single();
+}
