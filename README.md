@@ -54,3 +54,37 @@ pageload
 
 form listener for comments
 -createMessage
+
+## Stretch Goals Time!!
+
+## profile creation html
+
+sign out link
+home link
+
+div to hold form
+form
+-input text: username
+-upload photo
+-selector color
+submit button
+
+## css
+
+format page
+update new classes for "color" selection on username
+
+## updates to existing HTML
+
+-edit profile link
+-signing in goes straight to make a profile
+
+## profile page js
+
+-event listener for form upsert
+
+## js updates to other pages
+
+-retrieving user profiles
+-render username instead of uid
+-adding color class to uid from color class on form
