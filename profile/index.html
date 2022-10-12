@@ -19,6 +19,7 @@
             href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap"
         />
 
+        <link rel="stylesheet" href="../styles/profile.css" />
         <link rel="stylesheet" href="../styles/reset.css" />
         <link rel="stylesheet" href="../styles/global.css" />
         <title>Your Yahooligan Profile</title>
@@ -28,8 +29,39 @@
         <header class="page-header">
             <img class="logo" src="../assets/yahoo-face.png" />
             <p class="title">Your Yahooligan Profile</p>
+            <nav>
+                <a href="../">Home</a>
+                <a id="sign-out-link" href="../auth">Sign Out</a>
+            </nav>
         </header>
 
-        <main></main>
+        <main>
+            <div class="profile-container">
+                <form id="profile-form" class="profile-form">
+                    <label>
+                        <div>Username</div>
+                        <input
+                            name="username"
+                            type="text"
+                            id="username-input"
+                            class="username-input"
+                            required
+                        />
+                    </label>
+                    <label>
+                        <div>image upload</div>
+                        <input name="avatar" type="file" class="avatar-input" id="avatar-input" />
+                    </label>
+                    <img
+                        src="../assets/user.png"
+                        alt="image preview"
+                        id="preview-image"
+                        class="preview-image"
+                    />
+                    <button id="profile-update-button" class="profile-update-button">Update</button>
+                </form>
+                <p id="error-display" class="error"></p>
+            </div>
+        </main>
     </body>
 </html>

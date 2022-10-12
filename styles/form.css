@@ -53,9 +53,13 @@ form textarea {
 form button {
     margin-top: 10px;
     height: 45px;
-    background: var(--action-color);
+    background: #e0e0e0;
     font-weight: bold;
-    border: 4px solid #cbd71d;
+    border: 4px solid #8f8f8f;
+    padding: 5px;
+    height: 50px;
+    color: #8f8f8f;
+    border-radius: 10px;
 }
 
 form button:disabled {
