@@ -1,7 +1,7 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import './auth/user.js';
-import { createPost } from './fetch-utils.js';
+import { createPost, getUser } from './fetch-utils.js';
 import { renderPost } from './render-utils.js';
 import { getPosts } from './fetch-utils.js';
 import { onMessage } from './fetch-utils.js';
@@ -15,6 +15,8 @@ const scroll = document.querySelector('.scroll');
 /* State */
 let error = null;
 let posts = [];
+
+let user = getUser();
 /* Events */
 
 window.addEventListener('load', async () => {
@@ -30,6 +32,7 @@ window.addEventListener('load', async () => {
     onMessage(async (payload) => {
         const postId = payload.new.id;
         const postResponse = await getPost(postId);
+        console.log(postResponse.data);
         error = postResponse.error;
 
         if (error) {
@@ -50,9 +53,11 @@ postForm.addEventListener('submit', async (e) => {
 
     const insertPost = {
         post: formData.get('post-text'),
+        user_id: user.id,
     };
 
     const response = await createPost(insertPost);
+
     error = response.error;
 
     if (error) {

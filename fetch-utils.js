@@ -34,11 +34,17 @@ export async function createPost(post) {
 }
 
 export async function getPosts() {
-    return await client.from('commenthold').select('*');
+    return await client
+        .from('commenthold')
+        .select('*, user_id: profiles(user_id, username, image_url, color)');
 }
 
 export async function getPost(id) {
-    return await client.from('commenthold').select('*').eq('id', id).single();
+    return await client
+        .from('commenthold')
+        .select('*, user_id: profiles(user_id, username, image_url, color)')
+        .eq('id', id)
+        .single();
 }
 
 export function onMessage(handleMessage) {
