@@ -46,5 +46,23 @@ export function onMessage(handleMessage) {
 }
 
 export async function updateProfile(profile) {
-    return await client.from('profiles').upsert(profile).single();
+    return await client.from('profiles').update(profile).single().eq('user_id', profile.user_id);
+}
+
+export async function uploadImage(bucketName, imagePath, imageFile) {
+    const bucket = client.storage.from(bucketName);
+
+    const response = await bucket.upload(imagePath, imageFile, {
+        cacheControl: '3600',
+        upsert: true,
+    });
+
+    if (response) {
+        console.log(response.error);
+        return null;
+    }
+
+    const url = `${SUPABASE_URL}/storage/v1/object/public/${response.data.Key}`;
+
+    return url;
 }
