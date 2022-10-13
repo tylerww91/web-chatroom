@@ -80,4 +80,6 @@ textarea {
 .avatar-image {
     width: 80px;
     border-radius: 50%;
+    height: 80px;
+    object-fit: cover;
 }

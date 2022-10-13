@@ -23,7 +23,7 @@ window.addEventListener('load', async () => {
     const response = await getPosts();
     error = response.error;
     posts = response.data;
-
+    console.log(posts);
     if (error) {
         displayError();
     } else {

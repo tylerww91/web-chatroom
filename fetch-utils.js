@@ -36,7 +36,7 @@ export async function createPost(post) {
 export async function getPosts() {
     return await client
         .from('commenthold')
-        .select('*, user_id: profiles(user_id, username, image_url, color)');
+        .select('*, user_id:profiles(user_id, username, image_url, color)');
 }
 
 export async function getPost(id) {
