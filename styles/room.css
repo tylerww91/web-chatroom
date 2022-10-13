@@ -76,3 +76,8 @@ textarea {
     padding: 20px;
     gap: 5px;
 }
+
+.avatar-image {
+    width: 80px;
+    border-radius: 50%;
+}
