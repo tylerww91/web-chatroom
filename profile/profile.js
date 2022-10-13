@@ -10,18 +10,19 @@ const previewImage = document.getElementById('preview-image');
 
 let error = null;
 let user = getUser();
-console.log(user);
+
 profileForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(profileForm);
     let url = null;
 
-    const imageFile = formData.get('image');
+    const imageFile = formData.get('avatar');
+
     if (imageFile) {
         const randomFolder = Math.floor(Date.now() * Math.random());
-        console.log(imageFile);
         const imagePath = `avatarbicket/${randomFolder}/${imageFile.name}`;
+
         url = await uploadImage('avatarbicket', imagePath, imageFile);
     }
 
@@ -33,13 +34,13 @@ profileForm.addEventListener('submit', async (e) => {
     };
 
     const response = await updateProfile(profile);
-    console.log(response);
+
     error = response.error;
 
     if (error) {
         displayError();
     } else {
-        // location.assign('/');
+        location.assign('/');
     }
 });
 

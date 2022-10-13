@@ -46,7 +46,7 @@ export function onMessage(handleMessage) {
 }
 
 export async function updateProfile(profile) {
-    return await client.from('profiles').update(profile).single().eq('user_id', profile.user_id);
+    return await client.from('profiles').upsert(profile).single().eq('user_id', profile.user_id);
 }
 
 export async function uploadImage(bucketName, imagePath, imageFile) {
@@ -57,8 +57,7 @@ export async function uploadImage(bucketName, imagePath, imageFile) {
         upsert: true,
     });
 
-    if (response) {
-        console.log(response.error);
+    if (response.error) {
         return null;
     }
 
