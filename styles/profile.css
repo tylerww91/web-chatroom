@@ -1,0 +1,58 @@
+:root {
+    --background: #662963;
+    --header-background: #ecf2a1;
+    --text-color: #010101;
+    --label-color: #bc80ba;
+    --placeholder-color: #ecf2a1;
+    --offset-color: #f6f6f6;
+    --action-color: #ecf2a1;
+}
+
+.profile-container {
+    background: var(--offset-color);
+    border: 4px solid var(--label-color);
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+}
+
+.preview-image {
+    width: 100px;
+}
+
+.profile-form {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.username-input,
+.avatar-input {
+    margin: 5px;
+    padding: 2px;
+}
+
+.profile-update-button {
+    width: 172px;
+    background: #e0e0e0;
+    font-weight: bold;
+    border: 4px solid #8f8f8f;
+    padding: 5px;
+    height: 50px;
+    color: #8f8f8f;
+    border-radius: 10px;
+}
+
+div {
+    color: var(--label-color);
+    font-weight: bold;
+    font-size: 0em;
+}
+
+.username-input {
+    background: #e0e0e0;
+}
+
+.color-select {
+    background: #e0e0e0;
+}
