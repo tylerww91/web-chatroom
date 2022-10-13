@@ -23,7 +23,6 @@ window.addEventListener('load', async () => {
     const response = await getPosts();
     error = response.error;
     posts = response.data;
-    console.log(posts);
     if (error) {
         displayError();
     } else {
@@ -32,7 +31,7 @@ window.addEventListener('load', async () => {
     onMessage(async (payload) => {
         const postId = payload.new.id;
         const postResponse = await getPost(postId);
-        console.log(postResponse.data);
+
         error = postResponse.error;
 
         if (error) {
