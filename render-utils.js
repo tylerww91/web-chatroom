@@ -2,6 +2,9 @@ export function renderPost(post) {
     const li = document.createElement('li');
     li.classList.add('post');
 
+    const bigDiv = document.createElement('div');
+    bigDiv.classList.add('userEl');
+
     const div = document.createElement('div');
     div.classList.add('user');
     div.classList.add(`${post.user_id.color}`);
@@ -13,7 +16,9 @@ export function renderPost(post) {
 
     const p = document.createElement('p');
     p.textContent = post.post;
+    p.classList.add('textp');
 
-    li.append(img, div, p);
+    bigDiv.append(img, div);
+    li.append(bigDiv, p);
     return li;
 }
